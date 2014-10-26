@@ -1,17 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Odot4</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-  </head>
+<%= render 'layouts/header' %>
   <body>
-    <% flash.each do |type, message| %>
-      <div class="alert flash <%= type %>">
-        <%= message %>
+    <header>
+      <div class="container">
+        <h1><%= link_to "Odot", root_path %></h1>
+        <ul>
+          <li><%= link_to "Todo Lists", todo_lists_path %></li>
+        </ul>
+        <div class="clear"></div>
       </div>
-    <% end %>
-    <%= yield %>
+    </header>
+    <div class="container">
+      <% flash.each do |type, message| %>
+        <div class="alert flash <%= type %>">
+          <%= message %>
+        </div>
+      <% end %>
+      <%= yield %>
+    </div>
   </body>
 </html>
