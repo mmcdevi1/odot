@@ -56,6 +56,8 @@ header ul {
 header ul li {
   list-style: none;
   margin-top:17px;
+  float: left;
+  margin-left: 15px;
 }
 .clear {
   clear:both;

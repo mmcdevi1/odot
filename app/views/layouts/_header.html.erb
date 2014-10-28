@@ -6,3 +6,15 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1><%= link_to "Odot", root_path %></h1>
+        <ul>
+          <li><%= link_to "Todo Lists", todo_lists_path %></li>
+          <li><%= link_to "Sign Up", new_user_path %></li>
+          <li><%= link_to "Logout", logout_path %></li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </header>
