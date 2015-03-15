@@ -34,5 +34,6 @@ end
 
 group :test do 
   gem 'capybara'
+  gem 'capybara-email'
   gem 'shoulda-matchers'
 end
